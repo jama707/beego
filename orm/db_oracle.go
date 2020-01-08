@@ -135,3 +135,8 @@ func (d *dbBaseOracle) InsertValue(q dbQuerier, mi *modelInfo, isMulti bool, nam
 	err := row.Scan(&id)
 	return id, err
 }
+
+// No need for the qoute
+func (d *dbBase) TableQuote() string {
+	return ""
+}
